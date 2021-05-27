@@ -1,4 +1,4 @@
-{% set version = "0.5.1" %}
+{% set version = "0.5.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/lime_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/lime/lime_{{ version }}.tar.gz
-  sha256: 520367579a2b1fb891fba23614a4f4be9d6e2d8328b172c4146e30d706f93c08
+  sha256: 09fca2dc055268e0afcc50059b3a2fe6b8747923e70f4908336800279046680d
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -67,12 +67,8 @@ about:
   home: https://github.com/thomasp85/lime
   license: MIT
   license_file: LICENSE
-  summary: When building complex models, it is often difficult to explain why the model should
-    be trusted. While global measures such as accuracy are useful, they cannot be used
-    for explaining why a model made a specific prediction. 'lime' (a port of the 'lime'
-    'Python' package) is a method for explaining the outcome of black box models by
-    fitting a local model around the point in question an perturbations of this point.
-    The approach is described in more detail in the article by Ribeiro et al. (2016)  <arXiv:1602.04938>.
+  summary: When building complex models, it is often difficult to explain why the model should be trusted. While global measures such as accuracy are useful, they cannot be used for explaining why a model made a specific prediction. 'lime' (a port of the 'lime' 'Python' package) is a method for explaining the outcome of
+    black box models by fitting a local model around the point in question an perturbations of this point. The approach is described in more detail in the article by Ribeiro et al. (2016)  <arXiv:1602.04938>.
   license_family: MIT
 
 extra:
