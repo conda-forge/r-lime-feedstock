@@ -1,4 +1,4 @@
-{% set version = "0.5.2" %}
+{% set version = "0.5.3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/lime_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/lime/lime_{{ version }}.tar.gz
-  sha256: 09fca2dc055268e0afcc50059b3a2fe6b8747923e70f4908336800279046680d
+  sha256: c9415ad97b783402cf0bdcda2cf8d464febcd6309ca25dba2d020c181481f794
 
 build:
   merge_build_host: true  # [win]
