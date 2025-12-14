@@ -1,4 +1,4 @@
-{% set version = "0.5.3" %}
+{% set version = "0.5.4" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/lime_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/lime/lime_{{ version }}.tar.gz
-  sha256: c9415ad97b783402cf0bdcda2cf8d464febcd6309ca25dba2d020c181481f794
+  sha256: 41603bded554d4adb8324bc1982e5fec582b02e9e27f9aa17c1cc28d5cd0caaa
 
 build:
-  number: 4
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
